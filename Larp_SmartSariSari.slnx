@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../Larp.api/Larp.api.csproj" Id="caa78b33-7737-4dc0-8c54-e938a0b9d938" />
+  <Project Path="../Larp.domain/Larp.domain.csproj" Id="a2d8e0af-5afe-444d-a58e-158594fbcea9" />
+  <Project Path="../Larp.infrastructure/Larp.infrastructure.csproj" Id="8e0e5847-b5f4-4a2f-a32d-d9bdc8fa3c60" />
+  <Project Path="Larp.winforms.csproj" />
+</Solution>

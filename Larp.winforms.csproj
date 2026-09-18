@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Guna.Charts.WinForms" Version="1.1.0" />
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Login\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Larp.api\Larp.api.csproj" />
+    <ProjectReference Include="..\Larp.domain\Larp.domain.csproj" />
+  </ItemGroup>
+
+</Project>
