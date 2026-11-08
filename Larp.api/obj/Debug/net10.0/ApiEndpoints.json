@@ -1,0 +1,2366 @@
+[
+  {
+    "ContainingType": "Larp.api.Controllers.AdminUsersController",
+    "Method": "CreateCompanyUser",
+    "RelativePath": "admin/companies/{companyId}/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.CreateCompanyUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "Overview",
+    "RelativePath": "admin/overview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PlansController",
+    "Method": "GetAll",
+    "RelativePath": "admin/plans",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PlansController",
+    "Method": "Create",
+    "RelativePath": "admin/plans",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "r",
+        "Type": "Larp.domain.DTO.SavePlanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PlansController",
+    "Method": "GetById",
+    "RelativePath": "admin/plans/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PlansController",
+    "Method": "Update",
+    "RelativePath": "admin/plans/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "r",
+        "Type": "Larp.domain.DTO.SavePlanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PlansController",
+    "Method": "Delete",
+    "RelativePath": "admin/plans/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PlansController",
+    "Method": "Pdf",
+    "RelativePath": "admin/plans/pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.TenantSeederController",
+    "Method": "SeedProducts",
+    "RelativePath": "admin/seeder/products/{companyId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.TenantSeederController",
+    "Method": "SeedPurchases",
+    "RelativePath": "admin/seeder/purchases/{companyId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.TenantSeederController",
+    "Method": "SeedSales",
+    "RelativePath": "admin/seeder/sales/{companyId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "GetTenants",
+    "RelativePath": "admin/tenants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "GetTenant",
+    "RelativePath": "admin/tenants/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "UpdateTenant",
+    "RelativePath": "admin/tenants/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.UpdateTenantRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "CreateBackup",
+    "RelativePath": "admin/tenants/{id}/backup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "ListBackups",
+    "RelativePath": "admin/tenants/{id}/backups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "Migrate",
+    "RelativePath": "admin/tenants/{id}/migrate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "Reactivate",
+    "RelativePath": "admin/tenants/{id}/reactivate",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "r",
+        "Type": "Larp.domain.DTO.ReactivateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "Restore",
+    "RelativePath": "admin/tenants/{id}/restore",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "Larp.domain.DTO.RestoreRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AdminController",
+    "Method": "Suspend",
+    "RelativePath": "admin/tenants/{id}/suspend",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.TermsAndConditionsController",
+    "Method": "Get",
+    "RelativePath": "admin/terms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.TermsAndConditionsController",
+    "Method": "Save",
+    "RelativePath": "admin/terms",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.SaveTermsAndConditionsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.TermsAndConditionsController",
+    "Method": "ExportPdf",
+    "RelativePath": "admin/terms/pdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.CompaniesController",
+    "Method": "Create",
+    "RelativePath": "companies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "company",
+        "Type": "Larp.domain.Entities.Company",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.CompanyDatabasesController",
+    "Method": "Create",
+    "RelativePath": "company-databases",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyDatabase",
+        "Type": "Larp.domain.Entities.CompanyDatabase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "GetCount",
+    "RelativePath": "tenant/{companyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ApprovalController",
+    "Method": "GetPending",
+    "RelativePath": "tenant/{companyId}/approvals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ApprovalController",
+    "Method": "Approve",
+    "RelativePath": "tenant/{companyId}/approvals/{type}/{itemId}/approve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "itemId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ApprovalController",
+    "Method": "Reject",
+    "RelativePath": "tenant/{companyId}/approvals/{type}/{itemId}/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "itemId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BenefitsController",
+    "Method": "Get",
+    "RelativePath": "tenant/{companyId}/benefits/{employeeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BenefitsController",
+    "Method": "Save",
+    "RelativePath": "tenant/{companyId}/benefits/{employeeId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.SaveBenefitsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/branches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/branches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.SaveBranchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchController",
+    "Method": "Update",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.SaveBranchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchController",
+    "Method": "Deactivate",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Employees",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/employees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchController",
+    "Method": "AssignEmployee",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/employees/{employeeId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Expenses",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/expenses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Payroll",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/payroll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Purchases",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/purchases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Sales",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Summary",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "TopProducts",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/top-products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Trend",
+    "RelativePath": "tenant/{companyId}/branches/{branchId}/trend",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "branchId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BranchReportController",
+    "Method": "Compare",
+    "RelativePath": "tenant/{companyId}/branches/compare",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BenefitsController",
+    "Method": "GetRates",
+    "RelativePath": "tenant/{companyId}/contribution-rates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BenefitsController",
+    "Method": "CreateRate",
+    "RelativePath": "tenant/{companyId}/contribution-rates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "rate",
+        "Type": "Larp.domain.Entities.ContributionRate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BenefitsController",
+    "Method": "UpdateRate",
+    "RelativePath": "tenant/{companyId}/contribution-rates/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "rate",
+        "Type": "Larp.domain.Entities.ContributionRate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.BenefitsController",
+    "Method": "DeleteRate",
+    "RelativePath": "tenant/{companyId}/contribution-rates/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/employees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.EmployeeEntity, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/employees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employee",
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/employees/{employeeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "Update",
+    "RelativePath": "tenant/{companyId}/employees/{employeeId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employee",
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "Delete",
+    "RelativePath": "tenant/{companyId}/employees/{employeeId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "CreateAccount",
+    "RelativePath": "tenant/{companyId}/employees/{employeeId}/account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.CreateEmployeeAccountRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "Reactivate",
+    "RelativePath": "tenant/{companyId}/employees/{employeeId}/reactivate",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "Separate",
+    "RelativePath": "tenant/{companyId}/employees/{employeeId}/separate",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.api.Controllers.SeparationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.EmployeeEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.EmployeeController",
+    "Method": "GetActive",
+    "RelativePath": "tenant/{companyId}/employees/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.EmployeeEntity, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseCategoryController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/expense-categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.ExpenseCategory, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseCategoryController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/expense-categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "category",
+        "Type": "Larp.domain.Entities.ExpenseCategory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.ExpenseCategory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseCategoryController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/expense-categories/{categoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.ExpenseCategory",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/expenses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.Expense, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/expenses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "expense",
+        "Type": "Larp.domain.Entities.Expense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.Expense",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/expenses/{expenseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "expenseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.Expense",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "Update",
+    "RelativePath": "tenant/{companyId}/expenses/{expenseId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "expenseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "expense",
+        "Type": "Larp.domain.Entities.Expense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.Expense",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "Delete",
+    "RelativePath": "tenant/{companyId}/expenses/{expenseId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "expenseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "GetCategories",
+    "RelativePath": "tenant/{companyId}/expenses/categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "CreateCategory",
+    "RelativePath": "tenant/{companyId}/expenses/categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "category",
+        "Type": "Larp.domain.Entities.ExpenseCategory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ExpenseController",
+    "Method": "GetByDateRange",
+    "RelativePath": "tenant/{companyId}/expenses/date-range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "from",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.Expense, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.InventoryController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/inventory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.InventoryController",
+    "Method": "UpdateStock",
+    "RelativePath": "tenant/{companyId}/inventory/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.InventoryStockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.InventoryController",
+    "Method": "GetProductInventory",
+    "RelativePath": "tenant/{companyId}/inventory/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.InventoryController",
+    "Method": "Sell",
+    "RelativePath": "tenant/{companyId}/inventory/{productId}/sell",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.InventoryStockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PayrollController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/payroll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PayrollController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/payroll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payroll",
+        "Type": "Larp.domain.Entities.PayrollEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PayrollController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/payroll/{payrollId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payrollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PayrollController",
+    "Method": "Update",
+    "RelativePath": "tenant/{companyId}/payroll/{payrollId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payrollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payroll",
+        "Type": "Larp.domain.Entities.PayrollEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PayrollController",
+    "Method": "Delete",
+    "RelativePath": "tenant/{companyId}/payroll/{payrollId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payrollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PayrollController",
+    "Method": "Preview",
+    "RelativePath": "tenant/{companyId}/payroll/preview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "allowances",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "product",
+        "Type": "Larp.domain.Entities.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "Update",
+    "RelativePath": "tenant/{companyId}/products/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedProduct",
+        "Type": "Larp.domain.Entities.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "Delete",
+    "RelativePath": "tenant/{companyId}/products/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "UpdateStatus",
+    "RelativePath": "tenant/{companyId}/products/{productId}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.Entities.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ProductsController",
+    "Method": "GetNextProductCode",
+    "RelativePath": "tenant/{companyId}/products/next-code",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PurchaseController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/purchases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PurchaseController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/purchases",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Larp.domain.DTO.CreatePurchaseRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PurchaseController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/purchases/{purchaseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "purchaseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.PurchaseController",
+    "Method": "Cancel",
+    "RelativePath": "tenant/{companyId}/purchases/{purchaseId}/cancel",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "purchaseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ReportsController",
+    "Method": "GetIncomeStatement",
+    "RelativePath": "tenant/{companyId}/reports/income-statement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.ReportsController",
+    "Method": "GetSalesReport",
+    "RelativePath": "tenant/{companyId}/reports/sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SalesController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/sales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sale",
+        "Type": "Larp.domain.Entities.Sales",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SalesController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SalesController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/sales/{salesId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "salesId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.StockMovementController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/stock-movements/{movementId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "movementId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Larp.domain.Entities.StockMovement",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.StockMovementController",
+    "Method": "GetByDateRange",
+    "RelativePath": "tenant/{companyId}/stock-movements/date-range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "from",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.StockMovement, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.StockMovementController",
+    "Method": "GetByProduct",
+    "RelativePath": "tenant/{companyId}/stock-movements/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Larp.domain.Entities.StockMovement, Larp.domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SupplierController",
+    "Method": "GetAll",
+    "RelativePath": "tenant/{companyId}/suppliers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SupplierController",
+    "Method": "Create",
+    "RelativePath": "tenant/{companyId}/suppliers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supplier",
+        "Type": "Larp.domain.Entities.Supplier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SupplierController",
+    "Method": "GetById",
+    "RelativePath": "tenant/{companyId}/suppliers/{supplierId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supplierId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SupplierController",
+    "Method": "Update",
+    "RelativePath": "tenant/{companyId}/suppliers/{supplierId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supplierId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supplier",
+        "Type": "Larp.domain.Entities.Supplier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.SupplierController",
+    "Method": "Delete",
+    "RelativePath": "tenant/{companyId}/suppliers/{supplierId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "supplierId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Larp.api.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Larp.api.WeatherForecast, Larp.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

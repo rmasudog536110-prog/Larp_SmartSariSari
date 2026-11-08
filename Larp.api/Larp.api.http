@@ -1,0 +1,673 @@
+@Larp.api_HostAddress = http://localhost:5084
+
+###
+
+//WEATHER API
+GET {{Larp.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+//CREATE COMPANY
+POST {{Larp.api_HostAddress}}/companies
+Content-Type: application/json
+{
+"companyCode": "COM-003",
+"companyName": "Medium Company",
+"isActive": true
+}
+
+###
+
+//GET TENANTS
+GET {{Larp.api_HostAddress}}/tenant/1
+Accept: application/json
+Authorization:dadas
+
+###
+
+//CREATE PRODUCTS
+POST {{Larp.api_HostAddress}}/1/products
+Content-Type: application/json
+
+{
+"productCode": "PROD001",
+"productName": "Demo Product",
+"unitPrice": 99.50,
+"isActive": true,
+"imagePath": ""
+}
+
+###
+
+//GET PRODUCTS
+GET {{Larp.api_HostAddress}}/tenant/2/products
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjZjNDg0NDMzLWRiNmUtNDM0OC1iMGMyLWUzZjQzNjUwMGI5MyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdGFmZjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN0YWZmIiwiY29tcGFueUlkIjoiMiIsImVtcGxveWVlSWQiOiI1IiwiZXhwIjoxNzkwNzUzNzUwLCJpc3MiOiJMYXJwLmFwaSIsImF1ZCI6IkxhcnAuY2xpZW50In0.fJnDOTjy8sw_PaJvanXUlzvceufSsVRymHGyiTncTv4
+
+###
+
+//UPDATE PRODUCT
+PUT {{Larp.api_HostAddress}}/1/products/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjZjNDg0NDMzLWRiNmUtNDM0OC1iMGMyLWUzZjQzNjUwMGI5MyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdGFmZjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN0YWZmIiwiY29tcGFueUlkIjoiMiIsImVtcGxveWVlSWQiOiI1IiwiZXhwIjoxNzkwNzUzNzUwLCJpc3MiOiJMYXJwLmFwaSIsImF1ZCI6IkxhcnAuY2xpZW50In0.fJnDOTjy8sw_PaJvanXUlzvceufSsVRymHGyiTncTv4
+
+{
+"productCode": "111111 111111",
+"productName": "Magnum",
+"unitPrice": 90.00,
+"isActive": true
+}
+
+###
+
+//DELETE PRODUCT
+DELETE {{Larp.api_HostAddress}}/tenant/1/products/1
+Accept: application/json
+
+###
+
+//GET PRODUCTS WITH AUTHORIZATION
+GET {{Larp.api_HostAddress}}/tenant/1/Products
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjZjNDg0NDMzLWRiNmUtNDM0OC1iMGMyLWUzZjQzNjUwMGI5MyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdGFmZjEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN0YWZmIiwiY29tcGFueUlkIjoiMiIsImVtcGxveWVlSWQiOiI1IiwiZXhwIjoxNzkwNzM3MDI0LCJpc3MiOiJMYXJwLmFwaSIsImF1ZCI6IkxhcnAuY2xpZW50In0.Y0tZY6s4zvr8OxAazd6t2YtEEwGuTCN2MwXa7JFI5oI
+###
+
+//GET SALES REPORT
+GET {{Larp.api_HostAddress}}/tenant/1/reports/sales?startDate=2026-09-01&endDate=2026-09-19
+Accept: application/json
+
+###
+
+//GET EXPENSE CATEGORIES
+GET {{Larp.api_HostAddress}}/tenant/2/expense-categories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImU2MjY0OGQ4LTZjM2MtNGNiOC1hODAyLTk4NDYzODIxMDU0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXApLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4uc3RvcmUyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJjb21wYW55SWQiOiIyIiwiZW1wbG95ZWVJZCI6IjMiLCJleHAiOjE3OTA3MzY0MjMsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.SBUKUrV_4Zo_VYjG_14GJM-QRQe0PSHo12QScBDi0R8
+
+###
+
+//CREATE EXPENSE CATEGORY
+POST {{Larp.api_HostAddress}}/tenant/2/expense-categories
+Content-Type: application/json
+
+{
+"categoryName": "Electricity"
+}
+
+###
+
+//CREATE EXPENSE
+POST {{Larp.api_HostAddress}}/tenant/1/expenses
+Content-Type: application/json
+
+{
+"expenseCategoryId": 1,
+"description": "September electricity bill",
+"amount": 2500,
+"expenseDate": "2026-09-15",
+"paymentMethod": "Cash",
+"status": "Paid"
+}
+
+
+###
+
+//LOGIN 
+POST {{Larp.api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+"username": "admin.store2",
+"password": "Store2@Admin1"
+}
+
+###
+ 
+//CREATE COMPANY USER ADMIN
+POST {{Larp.api_HostAddress}}/admin/companies/3/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA4NzIyMDUsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.xIMKKEmBkYmcswD3AqbH69GHUqVWuZrEYl-XKsoeDTg
+
+{
+"username": "admin.store3",
+"password": "Store3@Admin1",
+"role": "Admin",
+"employeeCode": "EMP-001",
+"firstName": "Lovely",
+"lastName": "Masudog",
+"position": "Store Owner"
+}
+
+###
+ 
+//CREATE COMPANY USER ADMIN
+POST {{Larp.api_HostAddress}}/admin/companies/1/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA4NzIyMDUsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.xIMKKEmBkYmcswD3AqbH69GHUqVWuZrEYl-XKsoeDTg
+
+{
+"username": "admin.store1",
+"password": "Store1@Admin1",
+"role": "Admin",
+"employeeCode": "EMP-001",
+"firstName": "Erminda",
+"lastName": "Masudog",
+"position": "Store Owner"
+}
+
+###
+
+//CREATE COMPANY USER
+POST {{Larp.api_HostAddress}}/admin/companies/3/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA4NzIyMDUsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.xIMKKEmBkYmcswD3AqbH69GHUqVWuZrEYl-XKsoeDTg
+
+{
+"username": "manager.store3",
+"password": "Store3@Manager2",
+"role": "Manager",
+"employeeCode": "EMP-004",
+"firstName": "Erminda",
+"lastName": "Masudog",
+"position": "Store Manager"
+}
+
+###
+
+//GET COMPANY USERS
+GET {{Larp.api_HostAddress}}/admin/companies/2/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA4NzIyMDUsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.xIMKKEmBkYmcswD3AqbH69GHUqVWuZrEYl-XKsoeDTg
+
+###
+
+//CREATE COMPANY STAFF USER
+POST {{Larp.api_HostAddress}}/admin/companies/1/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTEyOTM2MjAsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.kl5mEBbDGfq_KweHeLVnsYPYPy8pkv4vFQVpMmxjI84
+
+{
+"username": "adminn.store1",
+"password": "Store1@Admin1",
+"role": "Admin",
+"employeeCode": "EMP-000",
+"firstName": "John",
+"lastName": "Doe",
+"position": "Admin"
+}
+
+###
+
+//GET PRODUCTS WITH AUTHORIZATION OF STAFF USER
+GET {{Larp.api_HostAddress}}/tenant/2/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA3NDAxNDgsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.H3dDBFY42yg7JIx4E8-rnWhJQpQXCAyy4TlKAZBZ9mE
+
+###
+
+//CREATE BACKUP
+POST {{Larp.api_HostAddress}}/admin/tenants/2/backup
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA3NDAxNDgsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.H3dDBFY42yg7JIx4E8-rnWhJQpQXCAyy4TlKAZBZ9mE
+
+###
+
+//GET BACKUPS
+GET {{Larp.api_HostAddress}}/admin/tenants/2/backups
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA3NDAxNDgsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.H3dDBFY42yg7JIx4E8-rnWhJQpQXCAyy4TlKAZBZ9mE
+
+###
+
+//RESTORE BACKUP
+POST {{Larp.api_HostAddress}}/admin/tenants/2/restore
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTA3NDAxNDgsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.H3dDBFY42yg7JIx4E8-rnWhJQpQXCAyy4TlKAZBZ9mE
+Content-Type: application/json
+
+{
+ "fileName": "20260929-195108-manual.zip", 
+"confirmCompanyName": "Small Company" 
+}
+
+
+### Create a purchase (Manager or Admin token). Use a real active supplier and product id.
+POST {{Larp.api_HostAddress}}/tenant/2/purchases
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImU2MjY0OGQ4LTZjM2MtNGNiOC1hODAyLTk4NDYzODIxMDU0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZG1pbi5zdG9yZTIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImNvbXBhbnlJZCI6IjIiLCJlbXBsb3llZUlkIjoiMyIsImV4cCI6MTc5MDc1MzkwMywiaXNzIjoiTGFycC5hcGkiLCJhdWQiOiJMYXJwLmNsaWVudCJ9.lEARWevqjO_RpiSN8-EGQI8KzKpd0aphimHEQ4bYYkI
+Content-Type: application/json
+
+{
+  "supplierId": 1,
+  "discount": 0,
+  "items": [
+    { "productId": 2, "quantity": 10, "unitCost": 45.50 }
+  ]
+}
+
+###
+GET {{Larp.api_HostAddress}}/tenant/2/purchases
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImU2MjY0OGQ4LTZjM2MtNGNiOC1hODAyLTk4NDYzODIxMDU0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZG1pbi5zdG9yZTIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImNvbXBhbnlJZCI6IjIiLCJlbXBsb3llZUlkIjoiMyIsImV4cCI6MTc5MDc1MzkwMywiaXNzIjoiTGFycC5hcGkiLCJhdWQiOiJMYXJwLmNsaWVudCJ9.lEARWevqjO_RpiSN8-EGQI8KzKpd0aphimHEQ4bYYkI
+
+###
+PUT {{Larp.api_HostAddress}}/tenant/2/purchases/1/cancel
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImU2MjY0OGQ4LTZjM2MtNGNiOC1hODAyLTk4NDYzODIxMDU0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZG1pbi5zdG9yZTIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImNvbXBhbnlJZCI6IjIiLCJlbXBsb3llZUlkIjoiMyIsImV4cCI6MTc5MDc1MzkwMywiaXNzIjoiTGFycC5hcGkiLCJhdWQiOiJMYXJwLmNsaWVudCJ9.lEARWevqjO_RpiSN8-EGQI8KzKpd0aphimHEQ4bYYkI
+
+###
+GET {{Larp.api_HostAddress}}/tenant/2/stock-movements/product/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImU2MjY0OGQ4LTZjM2MtNGNiOC1hODAyLTk4NDYzODIxMDU0NiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZG1pbi5zdG9yZTIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImNvbXBhbnlJZCI6IjIiLCJlbXBsb3llZUlkIjoiMyIsImV4cCI6MTc5MDc1MzkwMywiaXNzIjoiTGFycC5hcGkiLCJhdWQiOiJMYXJwLmNsaWVudCJ9.lEARWevqjO_RpiSN8-EGQI8KzKpd0aphimHEQ4bYYkI
+
+
+###---------------------------------------###
+
+### =====================================================================
+### LARP demo data seeding. Run the requests TOP TO BOTTOM, one click each.
+### Fill in the four @ variables below. Never put real passwords in a file you commit.
+### Request variables like {{supplier1.response.body.$.supplierId}} read the
+### result of an earlier request. If your Visual Studio does not evaluate them,
+### replace them with the number from the earlier response.
+### =====================================================================
+
+### ---------------------------------------------------------------------
+### 1. SUPER ADMIN LOGIN (only needed to create logins)
+### ---------------------------------------------------------------------
+
+# @name superLogin
+POST {{Larp.api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+"username": "ralph@admin",
+"password": "Larp@admin123"
+}
+
+
+### ---------------------------------------------------------------------
+### 2. CREATE LOGINS (skip any that already exist; a repeat returns 409)
+### Admin is created by SuperAdmin only. Employee codes must be unique.
+### ---------------------------------------------------------------------
+
+# @name createAdmin
+POST {{Larp.api_HostAddress}}/admin/companies/{{companyId}}/users
+Authorization: Bearer {{superLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "username": "{{adminUser}}",
+  "password": "{{adminPassword}}",
+  "role": "Admin",
+  "employeeCode": "EMP-A01",
+  "firstName": "Alma",
+  "lastName": "Reyes",
+  "position": "Store Owner"
+}
+
+###
+
+# @name createManager
+POST {{Larp.api_HostAddress}}/admin/companies/{{companyId}}/users
+Authorization: Bearer {{superLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "username": "{{managerUser}}",
+  "password": "{{managerPassword}}",
+  "role": "Manager",
+  "employeeCode": "EMP-M01",
+  "firstName": "Mario",
+  "lastName": "Santos",
+  "position": "Store Manager"
+}
+
+###
+
+# @name createStaff
+POST {{Larp.api_HostAddress}}/admin/companies/{{companyId}}/users
+Authorization: Bearer {{superLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "username": "{{staffUser}}",
+  "password": "{{staffPassword}}",
+  "role": "Staff",
+  "employeeCode": "EMP-S01",
+  "firstName": "Sara",
+  "lastName": "Cruz",
+  "position": "Cashier"
+}
+
+
+### ---------------------------------------------------------------------
+### 3. LOGIN AS ADMIN AND AS MANAGER (tokens are used by everything below)
+### Admin: suppliers, approvals. Manager: products, stock, sales, purchases.
+### (Admin cannot write products, inventory or sales by design.)
+### ---------------------------------------------------------------------
+
+# @name adminLogin
+POST {{Larp.api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{ "username": "{{adminUser}}", "password": "{{adminPassword}}" }
+
+###
+
+# @name managerLogin
+POST {{Larp.api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{ "username": "manager.store3", "password": "Store3@Manager2" }
+
+
+### manager store 1
+### eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA5NGQzYWFhLTRjYzUtNGRjNy1iZjM1LWQ0Zjc1NmU1NWM5MiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtYW5hZ2VyLnN0b3JlMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJjb21wYW55SWQiOiIxIiwiZW1wbG95ZWVJZCI6IjIiLCJleHAiOjE3OTA4NzY0NDIsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.7ekVxrNdDvuEyIAyvBWhxMimabvJzlo0S3lHXbFLLqc
+###
+
+### manager store 2
+### eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjRiMWZhZTE2LTNmZjktNGJiNC05Yzk4LTUzYTg5ZmNhYzA3ZiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtYW5hZ2VyLnN0b3JlMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJjb21wYW55SWQiOiIyIiwiZW1wbG95ZWVJZCI6IjQiLCJleHAiOjE3OTA4NzY1MjksImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.ezLNFGziEEKJnoEa6IKAR6q87GiUbu3bpnkmMhbPI0Y
+###
+
+### manager store 3
+### eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImM4ZmI3ZTc1LWU4ZTQtNGNlZS1hM2YyLTZjMTY2NjRkMjkzYyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtYW5hZ2VyLnN0b3JlMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJjb21wYW55SWQiOiIzIiwiZW1wbG95ZWVJZCI6IjQiLCJleHAiOjE3OTA4NzY1NzYsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.8kXeGfjE0E8gRvKPayosCNYU_LEljz2o8L77yHPv0CY
+###
+
+### ---------------------------------------------------------------------
+### 4. SUPPLIERS (Admin creates them already Approved)
+### ---------------------------------------------------------------------
+
+# @name supplier1
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/suppliers
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "supplierCode": "SUP-001",
+  "supplierName": "Astro Distributors",
+  "contactPerson": "Jun Dela Cruz",
+  "contactNumber": "09171234567",
+  "emailAddress": "astro@example.com",
+  "address": "Davao City"
+}
+
+
+### ---------------------------------------------------------------------
+### 5. PRODUCTS (Manager)
+### ---------------------------------------------------------------------
+
+# @name product1
+POST {{Larp.api_HostAddress}}/tenant/1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA5NGQzYWFhLTRjYzUtNGRjNy1iZjM1LWQ0Zjc1NmU1NWM5MiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtYW5hZ2VyLnN0b3JlMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJjb21wYW55SWQiOiIxIiwiZW1wbG95ZWVJZCI6IjIiLCJleHAiOjE3OTA4NzY0NDIsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.7ekVxrNdDvuEyIAyvBWhxMimabvJzlo0S3lHXbFLLqc
+Content-Type: application/json
+
+{ "productCode": "PRD-001", "productName": "Minute Maid", "unitPrice": 65.00, "isActive": true }
+
+###
+
+# @name product2
+POST {{Larp.api_HostAddress}}/tenant/1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA5NGQzYWFhLTRjYzUtNGRjNy1iZjM1LWQ0Zjc1NmU1NWM5MiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtYW5hZ2VyLnN0b3JlMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJjb21wYW55SWQiOiIxIiwiZW1wbG95ZWVJZCI6IjIiLCJleHAiOjE3OTA4NzY0NDIsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.7ekVxrNdDvuEyIAyvBWhxMimabvJzlo0S3lHXbFLLqc
+Content-Type: application/json
+
+{ "productCode": "PRD-002", "productName": "Instant Noodles", "unitPrice": 18.00, "isActive": true }
+
+###
+
+# @name product3
+POST {{Larp.api_HostAddress}}/tenant/1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA5NGQzYWFhLTRjYzUtNGRjNy1iZjM1LWQ0Zjc1NmU1NWM5MiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJtYW5hZ2VyLnN0b3JlMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJjb21wYW55SWQiOiIxIiwiZW1wbG95ZWVJZCI6IjIiLCJleHAiOjE3OTA4NzY0NDIsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.7ekVxrNdDvuEyIAyvBWhxMimabvJzlo0S3lHXbFLLqc
+Content-Type: application/json
+
+{ "productCode": "PRD-003", "productName": "Bottled Water", "unitPrice": 25.00, "isActive": true }
+
+
+### ---------------------------------------------------------------------
+### 6. STOCK IN through a PURCHASE (creates the inventory rows and
+### writes stock movements). Manager token.
+### ---------------------------------------------------------------------
+
+# @name purchase1
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/purchases
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "supplierId": {{supplier1.response.body.$.supplierId}},
+  "discount": 0,
+  "items": [
+    { "productId": {{product1.response.body.$.productId}}, "quantity": 50, "unitCost": 45.50 },
+    { "productId": {{product2.response.body.$.productId}}, "quantity": 100, "unitCost": 12.00 },
+    { "productId": {{product3.response.body.$.productId}}, "quantity": 8, "unitCost": 15.00 }
+  ]
+}
+
+
+### ---------------------------------------------------------------------
+### 7. REORDER LEVELS (makes the low-stock table and chart show something)
+### Water has 8 on hand and a reorder level of 10, so it shows as Low Stock.
+### This request sets the quantity too, so keep the quantities as bought.
+### ---------------------------------------------------------------------
+
+PUT {{Larp.api_HostAddress}}/tenant/{{companyId}}/inventory/{{product1.response.body.$.productId}}
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{ "quantityOnHand": 50, "reorderLevel": 10 }
+
+###
+
+PUT {{Larp.api_HostAddress}}/tenant/{{companyId}}/inventory/{{product2.response.body.$.productId}}
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{ "quantityOnHand": 100, "reorderLevel": 20 }
+
+###
+
+PUT {{Larp.api_HostAddress}}/tenant/{{companyId}}/inventory/{{product3.response.body.$.productId}}
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{ "quantityOnHand": 8, "reorderLevel": 10 }
+
+
+### ---------------------------------------------------------------------
+### 8. BRANCHES. Do this BEFORE the sales: a sale counts toward the
+### branch of the employee who records it (the Manager here).
+### ---------------------------------------------------------------------
+
+# @name branch1
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/branches
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "branchCode": "BR-001",
+  "branchName": "Main Branch",
+  "address": "Davao City",
+  "contactNumber": "09170000001"
+}
+
+###
+
+# @name branch2
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/branches
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "branchCode": "BR-002",
+  "branchName": "Toril Branch",
+  "address": "Toril, Davao City",
+  "contactNumber": "09170000002"
+}
+
+### Put the Manager in the main branch and the Staff member in the second one
+
+PUT {{Larp.api_HostAddress}}/tenant/{{companyId}}/branches/{{branch1.response.body.$.branchId}}/employees/{{createManager.response.body.$.employeeId}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+###
+
+PUT {{Larp.api_HostAddress}}/tenant/{{companyId}}/branches/{{branch2.response.body.$.branchId}}/employees/{{createStaff.response.body.$.employeeId}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+
+### ---------------------------------------------------------------------
+### 9. SALES (Manager token, so they count for Main Branch).
+### The server takes the price from the product, so none is sent.
+### ---------------------------------------------------------------------
+
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/sales
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "discount": 0,
+  "saleItems": [
+    { "productId": {{product1.response.body.$.productId}}, "quantity": 3, "discount": 0 },
+    { "productId": {{product2.response.body.$.productId}}, "quantity": 10, "discount": 0 }
+  ]
+}
+
+###
+
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/sales
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "discount": 0,
+  "saleItems": [
+    { "productId": {{product3.response.body.$.productId}}, "quantity": 2, "discount": 0 },
+    { "productId": {{product1.response.body.$.productId}}, "quantity": 5, "discount": 0 }
+  ]
+}
+
+
+### ---------------------------------------------------------------------
+### 10. EXPENSES (category first, then the expense)
+### ---------------------------------------------------------------------
+
+# @name category1
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/expense-categories
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{ "categoryName": "Electricity" }
+
+###
+
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/expenses
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "expenseCategoryId": {{category1.response.body.$.expenseCategoryId}},
+  "description": "October electricity bill",
+  "amount": 2500,
+  "expenseDate": "2026-10-01",
+  "paymentMethod": "Cash",
+  "status": "Paid"
+}
+
+
+### ---------------------------------------------------------------------
+### 11. PAYROLL. It is created as Pending and does not count in the income
+### statement until an Admin approves it (next step).
+### ---------------------------------------------------------------------
+
+# @name payroll1
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/payroll
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "employeeId": {{createStaff.response.body.$.employeeId}},
+  "payPeriodStart": "2026-10-01",
+  "payPeriodEnd": "2026-10-15",
+  "basicSalary": 6000,
+  "allowances": 500,
+  "deductions": 200
+}
+
+
+### ---------------------------------------------------------------------
+### 12. APPROVALS DEMO
+### A Manager's supplier is Pending, then the Admin approves it.
+### ---------------------------------------------------------------------
+
+# @name supplier2
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/suppliers
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "supplierCode": "SUP-002",
+  "supplierName": "Davao Beverage Trading",
+  "contactPerson": "Lita Gomez",
+  "contactNumber": "09181234567"
+}
+
+### What is waiting for approval (Admin)
+
+GET {{Larp.api_HostAddress}}/tenant/{{companyId}}/approvals
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### Approve the payroll (so it counts in the income statement)
+
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/approvals/payroll/{{payroll1.response.body.$.payrollId}}/approve
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### Approve the Manager's supplier (leave this one for the live demo if you prefer)
+
+POST {{Larp.api_HostAddress}}/tenant/{{companyId}}/approvals/supplier/{{supplier2.response.body.$.supplierId}}/approve
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+
+### ---------------------------------------------------------------------
+### 13. CHECK THE RESULTS
+### ---------------------------------------------------------------------
+
+### Income statement for the month
+
+GET {{Larp.api_HostAddress}}/tenant/{{companyId}}/reports/income-statement?startDate=2026-10-01&endDate=2026-10-31
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+
+### Sales report (what the Dashboard uses)
+
+GET {{Larp.api_HostAddress}}/tenant/{{companyId}}/reports/sales?startDate=2026-10-01&endDate=2026-10-31
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+
+### Stock levels
+
+GET {{Larp.api_HostAddress}}/tenant/{{companyId}}/inventory
+Authorization: Bearer {{managerLogin.response.body.$.token}}
+
+### Stock history for the first product
+
+GET {{Larp.api_HostAddress}}/tenant/{{companyId}}/stock-movements/product/{{product1.response.body.$.productId}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### Branch totals
+
+GET {{Larp.api_HostAddress}}/tenant/{{companyId}}/branches
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+###
+
+//ADMIN LOGIN
+POST {{Larp.api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+"username": "ralph@admin",
+"password": "Larp@admin123"
+}
+
+###
+
+POST {{Larp.api_HostAddress}}/admin/seeder/products/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTEyOTM2MjAsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.kl5mEBbDGfq_KweHeLVnsYPYPy8pkv4vFQVpMmxjI84
+
+###
+POST {{Larp.api_HostAddress}}/admin/seeder/purchases/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTEyOTM2MjAsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.kl5mEBbDGfq_KweHeLVnsYPYPy8pkv4vFQVpMmxjI84
+
+###
+
+POST {{Larp.api_HostAddress}}/admin/seeder/sales/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjA4ZTE2NjIzLWNkMjItNDdiYS05MDUzLTIzYTU4NDRiNmY2OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJyYWxwaEBhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN1cGVyQWRtaW4iLCJleHAiOjE3OTEyOTM2MjAsImlzcyI6IkxhcnAuYXBpIiwiYXVkIjoiTGFycC5jbGllbnQifQ.kl5mEBbDGfq_KweHeLVnsYPYPy8pkv4vFQVpMmxjI84

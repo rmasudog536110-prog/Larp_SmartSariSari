@@ -1,0 +1,11 @@
+C:\final_project\Larp.infrastructure\bin\Debug\net10.0-windows\Larp.infrastructure.deps.json
+C:\final_project\Larp.infrastructure\bin\Debug\net10.0-windows\Larp.infrastructure.dll
+C:\final_project\Larp.infrastructure\bin\Debug\net10.0-windows\Larp.infrastructure.pdb
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\Larp.infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\Larp.infrastructure.AssemblyInfoInputs.cache
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\Larp.infrastructure.AssemblyInfo.cs
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\Larp.infrastructure.csproj.CoreCompileInputs.cache
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\Larp.infrastructure.dll
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\refint\Larp.infrastructure.dll
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\Larp.infrastructure.pdb
+C:\final_project\Larp.infrastructure\obj\Debug\net10.0-windows\ref\Larp.infrastructure.dll
