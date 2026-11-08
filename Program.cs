@@ -1,4 +1,5 @@
-using Larp.winforms.Sales;
+using Larp.winforms.MicroTenant.Sales;
+using Larp.winforms;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -20,9 +21,9 @@ internal static class Program
             BaseAddress = new Uri("http://localhost:5084")
         };
 
-        int companyId = 1;
+        int companyId = 2;
 
         ApplicationConfiguration.Initialize();
-        Application.Run(new SalesWinForms(httpClient, companyId));
+        Application.Run(new Larp.winforms.SmallTenant.Login.LoginWinforms(httpClient));
     }
 }
